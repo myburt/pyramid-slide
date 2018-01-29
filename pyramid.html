@@ -13,39 +13,75 @@
     <meta charset="utf-8" />
 
     <style>
-        p
-        {
-            margin-top: .1em;
-            margin-bottom: .1em;
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #529A9A;
+        }
+
+        span {
+            padding: 1em;
+
+        }
+
+        .center {
+            text-align: center
+        }
+
+        #title {
+            padding-top: 2em;
+            padding-bottom: 2em;
+            background-color: darkslategray
+        }
+
+        .easy-pad{
+            padding: 2em;
+        }
+
+        #pyramidArea{
+            padding-left: 30%;
+            padding-right: 50%;
+            text-align: center;
+            
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row ">
-            <div class="col-12 align-center">
-                <h2 class="align-center">Pyrmaid Slide</h2>
-            </div>
 
-        </div>
-        <div class="row">
-                <div class="col-12">
-                    <form>
+    <div class="container" id="title" style="background-color:#9FCCCC;">
+
+        <h2 class="align-middle center">Pyrmaid Slide</h2>
+
+    </div>
+    <div class="container easy-pad" style="background-color:#FAFAFA;">
+        <div class="container" style="background-color:#CCCCCC;">
+            <form>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4 form-inline">
+                        Brick Symbol:
                         <select name="symbols" id="symbolSelect">
                             <option value="#">#</option>
                             <option value="@">@</option>
                             <option value="X">X</option>
                             <option value="$">$</option>
                         </select>
-                        <input id="rangeInput" type="range" min="1" max="20" value="8" />
-                        <span id="rangeVal">gs</span>
-                    </form>
-                </div>
-                <div class="col-6" id="pyramidArea">
+                    </div>
 
+                    <div class="col-4 form-inline">
+                        How High?
+                        <input id="rangeInput" type="range" min="1" max="20" value="8" />
+                        <span id="rangeVal" class="font-weight-bold align-middle"></span>
+                    </div>
+                    <div class="col-2"></div>
                 </div>
-            </div>
+            </form>
+        </div>
+
+        <div class="container" style="background-color: #EEEEEE;">
+            <div id="pyramidArea"></div>
+        </div>
     </div>
 
 </body>
